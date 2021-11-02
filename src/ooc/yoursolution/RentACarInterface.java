@@ -11,6 +11,8 @@ import java.util.List;
  */
 public interface RentACarInterface {
 
+//    print the list of cars using the enum in make.java file
+    
     /**
      * Return the full list of cars.
      *
