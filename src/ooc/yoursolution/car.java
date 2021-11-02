@@ -16,20 +16,20 @@ import java.util.HashMap;
 //This method in in charge of creating the calendar of availability 
 
 public class car implements CarInterface {
- private int id;
+ private final  int id;
  private Make make;
+ private final double rate;
  
  private Map<Month, Boolean[]>map;
   public car(int id, Make make,double rate){
      this.id= id;
      this.make=make;
-       
-     Map createAvailability = createAvailability();
-        
+      this.rate=rate;
+   createAvailability();       
    }
 
     @Override
-    public Map createAvailability() {
+    public final Map createAvailability() {
        map= new HashMap<>();
          //To change body of generated methods, choose Tools | Templates.
        map.put(Month.JANUARY,new Boolean[31]);
@@ -60,12 +60,12 @@ public class car implements CarInterface {
 
     @Override
     public double getRate() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       return rate ; //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void setRate(double rate) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         ; //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
