@@ -35,6 +35,7 @@ public  class BookingSystem implements BookingSystemInterface {
          for(int i=0; i<numCars; i++){
          Car car = new Car(i,make,dailyRate);
             cars.add(car);
+            
              }
          }
        
