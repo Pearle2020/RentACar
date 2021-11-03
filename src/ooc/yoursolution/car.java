@@ -1,22 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package ooc.yoursolution;
-
+import java.util.Map;
 import ooc.enums.Make;
+import ooc.enums.Month;
 
 /**
  *
  * @author Erick
  */
-public abstract class Car implements CarInterface {
+public  class Car implements CarInterface {
     
     private int id;
     private Make make;
-    private double dailyRate;
+    private  double dailyRate;
+    private Month month;
 
+  
+ 
+
+    @Override
     public int getId() {
         return id;
     }
@@ -25,10 +25,12 @@ public abstract class Car implements CarInterface {
         this.id = id;
     }
 
+    @Override
     public Make getMake() {
         return make;
     }
 
+    @Override
     public void setMake(Make make) {
         this.make = make;
     }
@@ -40,8 +42,15 @@ public abstract class Car implements CarInterface {
     public void setDailyRate(double dailyRate) {
         this.dailyRate = dailyRate;
     }
-    
-    
-    
+
+    public Month getMonth() {
+        return month;
+    }
+
+    public void setMonth(Month month) {
+        this.month = month;
+    }
+}
+
 
    
